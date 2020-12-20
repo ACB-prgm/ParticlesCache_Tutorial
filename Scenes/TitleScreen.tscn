@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/TitleScreen.gd" type="Script" id=1]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -38.5
+margin_top = 10.0
+margin_right = 38.5
+margin_bottom = 24.0
+text = "ACB_Gamez"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -10.0
+margin_right = 41.0
+margin_bottom = 10.0
+text = "SUBSCRIBE"
+
+[node name="StartTween" type="Tween" parent="."]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
